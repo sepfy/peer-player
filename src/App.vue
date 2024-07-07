@@ -42,6 +42,7 @@ const video = ref(null)
 
 var playerConfig = JSON.parse(localStorage.getItem('pp'))
 if (playerConfig == null) {
+  playerConfig = {}
   playerConfig.mqttUrl = "wss://broker.emqx.io:8084/mqtt"
   playerConfig.deviceId = "test"
   playerConfig.username = ""
