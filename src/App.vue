@@ -326,8 +326,10 @@ function exitFullscreen() {
 
 .joystick {
   position: absolute;
-  bottom: 80px;
-  right: 80px;
+  bottom: 70px;
+  right: 70px;
+  height: 1%;
+  width: 1%;
 }
 
 :-webkit-full-screen video {
