@@ -250,6 +250,8 @@ function launchIntoFullscreen(element) {
     element.webkitRequestFullscreen();
   } else if (element.msRequestFullscreen) {
     element.msRequestFullscreen();
+  } else if (video.value.webkitEnterFullScreen) {
+    video.value.webkitEnterFullScreen();
   }
 }
 
@@ -339,9 +341,9 @@ function exitFullscreen() {
 
 .video {
   position: fixed;
+  width: 100%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translateY(-50%);
 }
 
 :modal {
