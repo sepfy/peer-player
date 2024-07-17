@@ -31,8 +31,8 @@ jobs:
         git clone https://github.com/sepfy/sepfy.github.io.git
         cd sepfy.github.io
 
-        git rm -rf peer-player/*
-        cp -r ../dist/* peer-player/
+        git rm -rf peer-player
+        cp -r ../dist peer-player
 
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
