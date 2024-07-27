@@ -49,6 +49,7 @@ if (playerConfig == null) {
   playerConfig.deviceId = "test"
   playerConfig.username = ""
   playerConfig.password = ""
+  playerConfig.rotate = false
 }
 
 const deviceId = playerConfig.deviceId
@@ -171,6 +172,9 @@ pc.addTransceiver('video', {direction: 'recvonly'});
 const roundTo = function( num, decimal ) { return Math.round( ( num + Number.EPSILON ) * Math.pow( 10, decimal ) ) / Math.pow( 10, decimal ); }
 
 onMounted(() => {
+  if (playerConfig.rotate) {
+    video.value.style.transform = 'translate(-50%,-50%) rotate(180deg)';
+  }
 
   var joystick = nipplejs.create({
     zone: document.getElementById('joystick'),
@@ -375,4 +379,7 @@ function exitFullscreen() {
   transform: translate(-50%,-50%);
 }
 
+dialog:modal {
+  max-width: calc(100% - 6px - 2em);
+}
 </style>
