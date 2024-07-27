@@ -173,7 +173,7 @@ const roundTo = function( num, decimal ) { return Math.round( ( num + Number.EPS
 
 onMounted(() => {
   if (playerConfig.rotate) {
-    video.value.style.transform = 'translate(-50%,-50%) rotate(180deg)';
+    video.value.style.transform = 'translateY(-50%) rotate(180deg)';
   }
 
   var joystick = nipplejs.create({
